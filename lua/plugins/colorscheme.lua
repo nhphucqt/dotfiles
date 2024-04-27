@@ -1,13 +1,18 @@
 return {
+  -- add gruvbox
   {
-    "craftzdog/solarized-osaka.nvim",
-    branch = "osaka",
+    "folke/tokyonight.nvim",
     lazy = true,
-    priority = 1000,
-    opts = function()
-      return {
-        transparent = true,
-      }
-    end,
+    opts = {
+      style = "moon",
+    },
+  },
+
+  -- Configure LazyVim to lead gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight",
+    },
   },
 }
